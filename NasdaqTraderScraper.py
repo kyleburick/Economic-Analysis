@@ -234,7 +234,7 @@ def download_csv(file_info, file_path):
 
     df.to_csv(file_path, index = False)
 
-def library_creator(file_path, start = '20080101', end = None, new_lib = False):
+def data_downloader(file_path, start = '20080101', end = None, new_lib = False):
     """
     [Consumer Use]
 
@@ -297,6 +297,8 @@ def library_creator(file_path, start = '20080101', end = None, new_lib = False):
 
 def data_compiler(file_path, period = 'a'):
     """
+    [Consumer Use]
+
     Compiles the data in larger files based on your chosen compilation period
 
     file_path:
@@ -386,7 +388,7 @@ def data_updator(file_path):
     #if data isnt up to date
     if dt.datetime.today().strftime('%Y%m%d') > last_date:
         #downloads all data after the last date downloaded
-        library_creator(file_path, start = last_date)
+        data_downloader(file_path, start = last_date)
 
         #finds all files downloaded after the last date downloaded
         files = os.listdir(individual_path)
