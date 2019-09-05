@@ -1,4 +1,4 @@
-# Economic-Analysis
+# Nasdaq Trader Scraper
 A package that I created for scraping and combining the many individual files of stock data into a more usable format for analytics and updating that data when necessary.
 
 There are many functions in this package that can be used and documentation can be found for everything in the program file, but the only functions necessary for consumer use are documented below.
